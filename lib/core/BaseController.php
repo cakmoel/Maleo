@@ -1,9 +1,10 @@
 <?php
 /**
- * @abstract class Controller
+ * abstrac class BaseController
  * @author maoelana
  *
  */
+
 abstract class BaseController
 {
  protected $registry;
@@ -17,7 +18,7 @@ abstract class BaseController
    $this->db = $registry->db;
    $this->view = $registry->view;
    $this->linkBuilder = new LinkBuilder();
-   $this->linkBuilder->add('Home', APP_URL);
+   //$this->linkBuilder->add('Home', APP_URL);
  }
  
  protected function findRequest()
@@ -34,7 +35,7 @@ abstract class BaseController
  public function __destruct()
  {
    $this->preDispatch();
-   $this->view->dispatch;
+   $this->view->dispatch();
  }
  
 }
