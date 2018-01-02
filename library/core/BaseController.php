@@ -1,15 +1,37 @@
 <?php
 /**
  * abstrac class BaseController
- * @author maoelana
- *
+ * 
+ * @author lakota developer community
+ * @copyright contributors
+ * @version 1.0
+ * @since Since Release 1.0
  */
 
 abstract class BaseController
 {
+ /**
+  * Registry Object
+  * @var string
+  */
  protected $registry;
+ 
+ /**
+  * Database
+  * @var string
+  */
  protected $db;
+ 
+ /**
+  * View 
+  * @var string
+  */
  public $view;
+ 
+ /**
+  * link builder 
+  * @var string
+  */
  public $linkBuilder;
  
  public function __construct($registry)
@@ -21,6 +43,10 @@ abstract class BaseController
    //$this->linkBuilder->add('Home', APP_URL);
  }
  
+ /**
+  * @method findRequest
+  * @return request
+  */
  protected function findRequest()
  {
    return $this->registry->request;

@@ -1,12 +1,11 @@
 <?php
 /**
  * Class DbAdapterPDO
- * An adapter for our Database API in this case we will use PDO API
- * 
- * code inspired from 
+ * Database adaper that use PDO API
+ * Reference:
  * http://www.devshed.com/c/a/PHP/PHP-Service-Layers-Database-Adapters/
  * 
- * @author maoelana noermoehammad
+ * @author lakota developer community
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0

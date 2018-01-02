@@ -18,7 +18,7 @@ class LogError
 	 */
 	private static $_printError = false;
 	
-	private $logError = APP_SYSPATH . APP_LOG . DS;
+	protected $logError = APP_SYSPATH . APP_LIB . DS . 'log';
 	
 	/**
 	 * @method customErrorMessage
@@ -168,7 +168,7 @@ class LogError
 		<pre>{$trace}</pre>\n
 		<hr />\n";
 	    
-	    if(is_file($this->logError . $error_file) === false ) {
+	    if(is_file($this->logError . $error_file)===false) {
 	        file_put_contents($this->logError . $error_file, '');
 	    }
 	    

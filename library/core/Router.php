@@ -4,7 +4,8 @@
  * setting controller path
  * handling routes to load the controller
  * 
- * @author maoelana
+ * @author lakota developer community
+ * @copyright contributors
  * @license MIT
  * @version 1.0
  */
@@ -34,12 +35,34 @@ private $_args = [];
  * @var string
  */
 private $_file;
+/**
+ * 
+ * @var string
+ */
 private $_error;
-  
+
+/**
+ * Route
+ * @var array
+ */
 public $route = [];
+
+/**
+ * Controller
+ * @var string
+ */
 public $controller;
+
+/**
+ * action 
+ * @var string
+ */
 public $action;
-  
+
+/**
+ * 
+ * @param string $registry
+ */
 public function __construct($registry)
 {
   $this->_registry = $registry;
@@ -79,17 +102,20 @@ public function loader()
   // checking the controller
  $this->findController();
     
-  if (!is_readable($this->_file)) {
-    $this->_file = $this->_path . '/PageController.php';
+ if (!is_readable($this->_file)) {
+    
+    $this->_file = $this->_path.'/PageController.php';
     $this->controller = 'page';
+    // 404
     $this->action = 'notfound';
       
   }
-    
+  
+  // include file controller
   include $this->_file;
     
-  $classController = $this->controller . 'Controller';
-  $controller = new $classController($this->_registry);
+  $class = $this->controller . 'Controller';
+  $controller = new $class($this->_registry);
     
   if (!is_callable(array($controller, $this->action))) {
     $action = 'index';   
@@ -97,12 +123,12 @@ public function loader()
     $action = $this->action;     
   }
     
-// loading arguments for action
+  // loading arguments for action
   $i = 0;
   foreach ($this->route as $key => $value) {
    if ($key > 1) {
     $this->_args[$this->route[$key -1]] = $value;
-  $i++;
+    $i++;
         
    }
       
@@ -130,9 +156,12 @@ private function findController()
   $requestURL = rtrim(filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL), '/');
   $route =  (empty($requestURL)) ? 'index' : $requestURL;
   $this->route = explode('/', $route);
+  
   $this->controller = (isset($this->route[0])) ? $this->route[0] : 'index';
   $this->action = (isset($this->route[1])) ? $this->route[1] : 'index';
-  $this->_file = $this->_path . '/' . ucfirst($this->controller) . 'Controller.php';      
+  // set the controller path
+  $this->_file = $this->_path . '/' . ucfirst($this->controller) . 'Controller.php'; 
+  
 }
   
 }

@@ -3,7 +3,8 @@
  * Class DbAdapterFactory
  * Responsible for instantiating the appropriate database adapter type 
  * 
- * @author maoelana noermoehammad
+ * @author lakota developer community
+ * @copyright contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0

@@ -9,8 +9,8 @@ class PageController extends BaseController
    
    public function notfound()
    {
-     $this->view->title = "Page Not Found";
-     $this->view->message = "Page Not Found";
+     $this->view->title = 'Page Not Found';
+     $this->view->message = 'Page Not Found';
      
    }
    

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * abstract class DomainObject
  * References:
@@ -7,11 +6,12 @@
  * https://github.com/codeinthehole/domain-model-mapper
  * http://www.devshed.com/c/a/PHP/PHP-Services-Layers-Data-Mappers
  * 
- * @author maoelana
+ * @author lakota developer community
+ * @copyright contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0
- *
+ * 
  */
 
 abstract class DomainObject
@@ -45,7 +45,7 @@ public function __construct($data = [], $exceptionHandling)
 }
 
 /**
- * @method static fieldNameList
+ * @method fieldNameList
  * @return string
  */
 public static function fieldNameList()

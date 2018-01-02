@@ -7,7 +7,8 @@
  * http://martinfowler.com/eaaCatalog/tableDataGateway.html
  * http://css.dzone.com/books/practical-php-patterns-table
  *
- * @author maoelana noermoehammad
+ * @author lakota developer community
+ * @copyright contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0

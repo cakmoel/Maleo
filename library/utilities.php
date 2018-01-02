@@ -1,4 +1,5 @@
 <?php
+
 function baseUrl($key = null)
 {
     $base = array(
@@ -8,7 +9,7 @@ function baseUrl($key = null)
     );
     
     $path = ($key) ? $base[$key] : '';
-    echo APP_URL . '/views' . $path;
+    print APP_URL . DS . APP_PUBLIC . $path;
 }
 
 function getUrl()
@@ -17,7 +18,7 @@ function getUrl()
     echo APP_URL . '/' . join('/', $args);
 }
 
-function breadcrumbs($params, $sptr = null)
+function linkbuilder($params, $sptr = null)
 {
     $separator = (is_null($sptr)) ? ' &gt; ' : $sptr;
     $truncate = 25;

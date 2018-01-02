@@ -9,7 +9,7 @@ if (version_compare(PHP_VERSION, '5.4', '>=')) {
         
     spl_autoload_register(function ($class){
             
-       $directories = ['core/', 'db/', 'provider/'];
+       $directories = ['core/', 'db/', 'helper/'];
             
        foreach ($directories as $dir) {
                 

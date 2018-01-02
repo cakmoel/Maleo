@@ -7,12 +7,10 @@ if (!defined('APP_SYSPATH')) define('APP_SYSPATH', realpath(dirname(dirname(__FI
 if (!defined('PHP_EOL')) define('PHP_EOL', strtoupper(substr(PHP_OS, 0, 3) == 'WIN') ? "\r\n" : "\n");
 
 // Site configuration
-define('APP_URL', 'http://' . $_SERVER['HTTP_HOST'] . DS .'blogmvc');
-define('APP_LIB',  'lib');
-define('APP_CONTROLLERS', 'controllers');
-define('APP_MODELS', 'models');
-define('APP_VIEWS', 'views');
-define('APP_LOG', 'log');
+define('APP_URL', 'http://' . $_SERVER['HTTP_HOST'] . DS .'lakota');
+define('APP_PATH', 'application');
+define('APP_LIB',  'library');
+define('APP_PUBLIC', 'public');
 define('APP_EMAIL', 'alanmoehammad@gmail.com');
 
 // Database configuration
