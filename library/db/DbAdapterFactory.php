@@ -3,8 +3,8 @@
  * Class DbAdapterFactory
  * Responsible for instantiating the appropriate database adapter type 
  * 
- * @author lakota developer community
- * @copyright contributors
+ * @author Maleo developer community
+ * @copyright 2017 contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0
@@ -16,7 +16,6 @@ class DbAdapterFactory
 
 /**
  * @method dbInit
- * @static
  * @access public
  * @param string $type
  * @param string $connectionValue

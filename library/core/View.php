@@ -2,8 +2,9 @@
 /**
  * class View
  * 
- * @author lakota developer community
- * @copyright contributors
+ * @author Maleo developer community
+ * @copyright 2017 contributors
+ * @license MIT
  * @version 1.0 
  * @since Since Release 1.0
  */
@@ -95,11 +96,20 @@ class View
    
  }
  
+ /**
+  * setNoRender
+  * @param boolean $norender
+  */
  public function setNoRender($norender = true)
  {
   $this->_norender = $norender;
  }
  
+ /**
+  * Dispatch
+  * @throws Exception
+  * @return void|boolean
+  */
  public function dispatch()
  {
   try {

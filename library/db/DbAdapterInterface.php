@@ -1,10 +1,11 @@
 <?php
 /**
  * Interface DbAdapterInterface	
- * The Adapter to describe the functionality
+ * The Database Adapter Interface to describe the functionality
  * that any database adapter will need.
  * 
- * @author maoelana noermoehammad
+ * @author Maleo developer community
+ * @copyright 2017 contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0

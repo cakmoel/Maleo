@@ -1,11 +1,12 @@
 <?php
 /**
  * Class DbAdapterPDO
- * Database adaper that use PDO API
+ * Database adapter that use PDO API
  * Reference:
  * http://www.devshed.com/c/a/PHP/PHP-Service-Layers-Database-Adapters/
  * 
- * @author lakota developer community
+ * @author Maleo developer community
+ * @copyright 2017 contributors
  * @license MIT
  * @version 1.0
  * @since Since Release 1.0
@@ -96,7 +97,7 @@ public function dbQuery($sql, $parameters = array())
 		
   if (count($parameters) > 0) {
 			
-  // user prepared statement if parameters found
+  // use prepared statement if parameters found
 			
   $this->_lastStatement = $this->_db->prepare($sql);
 			

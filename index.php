@@ -2,14 +2,6 @@
 
 require 'library/init.php';
 
-Autoloader::setCacheFilePath(APP_SYSPATH . APP_LIB . DS . 'cache/cache.txt');
-Autoloader::setClassPaths(array(
-    APP_SYSPATH . APP_PATH . DS . 'controllers/', 
-    APP_SYSPATH . APP_PATH . DS . 'models/',
-));
-
-Autoloader::register();
-
 // declare registry object
 $registry = new Registry();
 

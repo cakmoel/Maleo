@@ -4,10 +4,11 @@
  * setting controller path
  * handling routes to load the controller
  * 
- * @author lakota developer community
+ * @author Maleo developer community
  * @copyright contributors
  * @license MIT
  * @version 1.0
+ * @since Since Release 2017
  */
 
 class Router

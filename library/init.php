@@ -32,4 +32,13 @@ if (version_compare(PHP_VERSION, '5.4', '>=')) {
     
 }
 
+// register loader classes needed on application directory and set cache directory
+Autoloader::setCacheFilePath(APP_SYSPATH . APP_PATH . DS . 'cache/cache.txt');
+Autoloader::setClassPaths(array(
+    APP_SYSPATH . APP_PATH . DS . 'controllers/',
+    APP_SYSPATH . APP_PATH . DS . 'models/',
+));
+
+Autoloader::register();
+
 $dbAdapter = DbAdapterFactory::dbInit(ADAPTER_TYPE, array(DB_CONNECTION, DB_USR, DB_PWD));

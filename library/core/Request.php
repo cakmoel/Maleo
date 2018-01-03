@@ -3,8 +3,9 @@
  * Class Request
  * Handling request
  * 
- * @author lakota developer community
- * @copyright contributors
+ * @author Maleo developer community
+ * @copyright 2017 contributors
+ * @license MIT
  * @version 1.0
  * @since Since Release 1.0
  */
@@ -28,12 +29,23 @@ class Request
   * @var string
   */
  private $_paramString;
-  
+ 
+ /**
+  * Constructor
+  * @param string $registry
+  */
  public function __construct($registry)
  {
   $this->_registry = $registry;
  }
-  
+ 
+ /**
+  * findURL
+  * @param string $action
+  * @param string $controller
+  * @param array $params
+  * @return string
+  */
  public function findURL($action = null, $controller = null, $params = array())
  {
    if (is_null($controller)) $controller = $this->_registry->router->controller;
@@ -60,35 +72,52 @@ class Request
      
  }
 
-  public function findQuery($args, $key = null)
-  {
-    if (is_null($key)) {
-      return $args;
-    }
+ /**
+  * findQuery 
+  * @param array $args
+  * @param string $key
+  * @return array|NULL|array
+  */
+ public function findQuery($args = array(), $key = null)
+ {
+    
+  if (is_null($key)) {
+    return $args;
+  }
       
-    return (count($args) > 0) ? $args[0]['url'] : null;
+  return (count($args) > 0) ? $args[0]['url'] : null;
     
-  }
-  
-  public function findPostRequestMethod($key = null, $default = null)
-  {
-    if (is_null($key)) {
-        
-      return $_SERVER['REQUEST_METHOD'] = 'POST';
+ }
+ 
+ /**
+  * findPostMethod
+  * @param string $key
+  * @param string $default
+  * @return string|string|mixed
+  */
+ public function findPostMethod($key = null, $default = null)
+ {
+  if (is_null($key)) {
+    return $_SERVER['REQUEST_METHOD'] = 'POST';
       
-    }
-    
-    return (isset($_POST[$key])) ? filter_input(INPUT_POST, $key, FILTER_SANITIZE_URL) : $default;
-    
   }
-  
-  public function redirectURL($action = null, $controller = null, $params = array())
-  {
     
-    $request = $this->findURL($action, $controller);
-    header('location:'.$request);
-    exit();
+  return (isset($_POST[$key])) ? filter_input(INPUT_POST, $key, FILTER_SANITIZE_URL) : $default;
     
-  }
+ }
+ 
+ /**
+  * redirectURL
+  * @param string $action
+  * @param string $controller
+  * @param array $params
+  */
+ public function redirectURL($action = null, $controller = null, $params = array())
+ {
+   $request = $this->findURL($action, $controller);
+   header('location:'.$request);
+   exit();
+    
+ }
   
 }

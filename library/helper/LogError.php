@@ -18,7 +18,7 @@ class LogError
 	 */
 	private static $_printError = false;
 	
-	protected $logError = APP_SYSPATH . APP_LIB . DS . 'log';
+	protected $logError = APP_SYSPATH . APP_PATH . DS . 'log';
 	
 	/**
 	 * @method customErrorMessage

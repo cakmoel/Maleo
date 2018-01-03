@@ -2,8 +2,9 @@
 /**
  * abstrac class BaseController
  * 
- * @author lakota developer community
- * @copyright contributors
+ * @author Maleo developer community
+ * @copyright 2017 contributors
+ * @license MIT
  * @version 1.0
  * @since Since Release 1.0
  */
