@@ -1,4 +1,8 @@
 <?php 
+namespace Maleo\helper;
+
+use Exception;
+
 /**
  * Class LogError
  * Handling Error Log

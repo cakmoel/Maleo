@@ -1,4 +1,5 @@
 <?php
+namespace Maleo\helper;
 
 class LinkBuilder
 {

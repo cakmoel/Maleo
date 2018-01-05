@@ -7,7 +7,7 @@ if (!defined('APP_SYSPATH')) define('APP_SYSPATH', realpath(dirname(dirname(__FI
 if (!defined('PHP_EOL')) define('PHP_EOL', strtoupper(substr(PHP_OS, 0, 3) == 'WIN') ? "\r\n" : "\n");
 
 // Site configuration
-define('APP_URL', 'http://' . $_SERVER['HTTP_HOST'] . DS .'lakota');
+define('APP_URL', 'http://' . $_SERVER['HTTP_HOST'] . DS .'maleo');
 define('APP_PATH', 'application');
 define('APP_LIB',  'library');
 define('APP_PUBLIC', 'public');
