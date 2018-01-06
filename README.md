@@ -1,0 +1,2 @@
+# Maleo
+What is Maleo ?  Maleo is a free and open source php framework to build web based application. Maleo is built with primarily purpose to help student learn object oriented programming use PHP.   Students can build their own PHP MVC based web application.   Why is Maleo ?  Maleo is easy, simple and it use Model-View-Controller (MVC) pattern.  Maleo support PHP 5 and not depend on Database.Maleo is a back 
