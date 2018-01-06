@@ -1,6 +1,4 @@
 <?php
-namespace Maleo\core;
-
 /**
  * Class MaleoRequest
  * Handling request

@@ -1,10 +1,4 @@
 <?php
-namespace Maleo\core;
-
-use Exception;
-
-use Maleo\helper\LogError;
-
 /**
  * class MaleoView
  * 

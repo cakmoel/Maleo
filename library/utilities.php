@@ -1,18 +1,19 @@
 <?php
 
-function baseUrl($key = null)
+function base_ui($key = null)
 {
-    $base = array(
+    $base_ui = array(
         'css' => '/css',
         'js'  => '/js',
-        'img' => '/images'
+        'img' => '/images',
+        'vendor'  => '/vendor'
     );
     
-    $path = ($key) ? $base[$key] : '';
+    $path = ($key) ? $base_ui[$key] : '';
     print APP_URL . DS . APP_PUBLIC . $path;
 }
 
-function getUrl()
+function get_url()
 {
     $args = func_get_args();
     echo APP_URL . '/' . join('/', $args);

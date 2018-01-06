@@ -1,13 +1,4 @@
 <?php
-
-namespace Maleo\db;
-
-use PDO;
-
-use PDOException;
-
-use Maleo\helper\LogError;
-
 /**
  * Class MaleoAdapterPDO
  * Database adapter that use PDO API

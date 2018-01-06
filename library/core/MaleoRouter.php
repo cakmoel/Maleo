@@ -1,10 +1,4 @@
 <?php
-namespace Maleo\core;
-
-use Exception;
-
-use Maleo\helper\LogError;
-
 /**
  * Class MaleoRouter
  * setting controller path
@@ -136,9 +130,9 @@ public function loader()
   $controller = new $class($this->_registry);
     
   if (!is_callable(array($controller, $this->action))) {
-    $action = 'index';   
+     $action = 'index';   
   } else {
-    $action = $this->action;     
+     $action = $this->action;     
   }
     
   // loading arguments for action

@@ -1,19 +1,13 @@
 <?php 
-namespace Maleo\helper;
-
-use Exception;
-
 /**
  * Class LogError
  * Handling Error Log
  *
  * @author    Maoelana Noermoehammad
  * @license   MIT
- * @version   1.0
- * @since     Since Release 1.0
- *
+ * @version   Beta
+ * @since     Since Release Betae
  */
-
 class LogError
 {
 	/**

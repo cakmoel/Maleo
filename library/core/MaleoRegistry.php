@@ -1,6 +1,4 @@
 <?php
-namespace Maleo\core;
-
 /**
  * class MaleoRegistry
  * Implement Registry for single data object 

@@ -1,7 +1,4 @@
 <?php
-namespace Maleo\helper;
-
-use Maleo\db\MaleoDatabaseFactory as DatabaseFactory;
 
 /**
  * class ActiveRecord
@@ -13,11 +10,10 @@ use Maleo\db\MaleoDatabaseFactory as DatabaseFactory;
  * @since Since Release 2017
  *
  */
-
 class MaleoActiveRecord
 {
   public static function getDatabaseAdapter()
   {
-    return DatabaseFactory::dbInit('PDO', array(DB_CONNECTION, DB_USR, DB_PWD));
+    return MaleoDatabaseFactory::dbInit('PDO', array(DB_CONNECTION, DB_USR, DB_PWD));
   }
 }

@@ -1,6 +1,9 @@
 <?php
-namespace Maleo\helper;
-
+/**
+ * 
+ * @author Maleo Developer Community
+ *
+ */
 class LinkBuilder
 {
  private $_trail = [];

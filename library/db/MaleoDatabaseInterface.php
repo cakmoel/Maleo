@@ -1,6 +1,4 @@
 <?php
-namespace Maleo\db;
-
 /**
  * Interface MaleoDatabaseInterface
  * The Database Adapter Interface to describe the functionality

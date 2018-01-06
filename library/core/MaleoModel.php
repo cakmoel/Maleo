@@ -1,12 +1,4 @@
 <?php
-namespace Maleo\core;
-
-use Maleo\helper\MaleoActiveRecord;
-
-use Maleo\helper\LogError;
-
-use Exception;
-
 /**
  * class MaleoModel
  * 

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Autoloader is a class scanner with caching.
  * 

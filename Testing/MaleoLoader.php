@@ -1,6 +1,5 @@
 <?php
-namespace Maleo\core;
-
+namespace Maleo;
 /**
  * class MaleoAppLoader
  * 
@@ -10,7 +9,7 @@ namespace Maleo\core;
  * @version Beta
  * @since Since Release Beta
  */
-class MaleoAppLoader
+class MaleoLoader
 {
 
  /**
@@ -125,7 +124,7 @@ class MaleoAppLoader
   */
  public function registerLoader()
  {
-     spl_autoload_register(array($this, 'loaderClass'));
+   spl_autoload_register(array($this, 'loaderClass'));
  }
  
 }

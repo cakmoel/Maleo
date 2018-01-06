@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends BaseController
+class IndexController extends MaleoController
 {
   public function index()
   {

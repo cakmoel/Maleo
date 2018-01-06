@@ -1,8 +1,4 @@
 <?php
-namespace Maleo\db;
-
-use Exception;
-
 /**
  * Class MaleoDatabaseFactory
  * Responsible for instantiating the appropriate database adapter type 
@@ -23,21 +19,21 @@ class MaleoDatabaseFactory
  * @param string $type
  * @param string $connectionValue
  * @throws Exception
- * @return object adapter -- new $dbAdapterType($connectionValue)
+ * @return object adapter
  */
 public static function dbInit($type, $connectionValue)
 {
-  $dbAdapterType = "MaleoAdapter".$type;	
+  $adapterType = "MaleoAdapter" . $type;	
     
-    if (class_exists($dbAdapterType)) {
+   if (class_exists($adapterType)) {
     
-    return new $dbAdapterType($connectionValue);
+       return new $adapterType($connectionValue);
 	
-    } else {
+   } else {
 			
-    throw new Exception("Database Adapter Type Does Not Exists !");
+     throw new Exception("File {$adapterType} Does Not Exists !");
 	 
-    }
+   }
 }
 
 }

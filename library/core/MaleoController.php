@@ -1,8 +1,4 @@
 <?php
-namespace Maleo\core;
-
-use Maleo\helper\LinkBuilder;
-
 /**
  * class MaleoController
  * 
