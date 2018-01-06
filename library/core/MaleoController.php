@@ -49,7 +49,7 @@ class MaleoController
    $this->db = $registry->db;
    $this->view = $registry->view;
    $this->linkBuilder = new LinkBuilder();
-   //$this->linkBuilder->add('Home', APP_URL);
+   $this->linkBuilder->add('Maleo Framework', APP_URL);
  }
  
  /**
@@ -67,8 +67,10 @@ class MaleoController
   */
  public function preDispatch()
  {
-   $this->view->linkBuilder = $this->linkBuilder;
-   $this->view->title = $this->linkBuilder->getTitle();
+  
+    $this->view->linkBuilder = $this->linkBuilder;
+    $this->view->title = $this->linkBuilder->getTitle(); 
+    
  }
  
  /**

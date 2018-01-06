@@ -25,7 +25,6 @@ $key = 'e0aa8df8a945a35a77f617945f3ded43687a3a456f63c7b4fb6c0ae6e7f622b4';
 $checkIncKey = sha1(mt_rand(1, 1000000).$key);
 define('APP_KEY', $checkIncKey);
 
-error_reporting(E_ALL);
 date_default_timezone_set('Asia/Jakarta');
 
 if (!(is_readable(APP_SYSPATH . APP_LOADER)) 

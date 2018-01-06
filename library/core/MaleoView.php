@@ -77,7 +77,7 @@ class MaleoView
  {
   try {
       
-    if (!is_dir($path)) {
+    if (is_dir($path)== false) {
         
        throw new Exception("Invalid view path: {$path}");
        

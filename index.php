@@ -26,7 +26,7 @@ $registry->db = MaleoDatabaseFactory::dbInit(ADAPTER_TYPE, array(DB_CONNECTION, 
 $registry->view = new MaleoView($registry);
 
 // set the view path
-$registry->view->setPath(APP_SYSPATH . APP_PATH . '/views');
+$registry->view->setPath(APP_SYSPATH . APP_PATH . DS . 'views');
 
 // load the router
 $registry->router = new MaleoRouter($registry);
